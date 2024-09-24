@@ -1,0 +1,89 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    .main-menu {
+      
+        .logo-icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            height: 90px;
+            padding-inline: 20px;
+
+            background-color: $dark-blue;
+
+            .logo-menu {
+                a {
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+                    color: $navajo-white;
+                }
+            }
+            .icon-menu {
+                height: 25px;
+                width: 25px;
+
+                background-color: $navajo-white;
+            }
+        }
+        .menu-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: calc(100vh - 90px);
+
+            background-color: $dark-blue;
+            .list-container {
+                ul {
+                    li {
+                        a {
+                            display: block;
+                            padding: 10px 20px;
+    
+                            color: $navajo-white;
+                            background-color: $dark-blue;
+    
+                            &:hover {
+                                background-color: $dark-blue-02;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            
+            .list-icon-container {
+                background-color: $dark-blue;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    padding-inline: 15px;
+                    gap: 10px;
+                    flex-wrap: wrap;
+    
+                    li {
+                        a {
+                            @include flex-center;
+                            padding: 20px 10px;
+                            font-size: 1.2rem;
+                            color: $navajo-white;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
