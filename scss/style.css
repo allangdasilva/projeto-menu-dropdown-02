@@ -71,9 +71,44 @@ header .main-menu .menu-content .list-container ul li a {
 header .main-menu .menu-content .list-container ul li a:hover {
   background-color: #110F1B;
 }
-header .main-menu .menu-content .list-container ul li a span {
+header .main-menu .menu-content .list-container ul li a:hover .span-icon {
+  opacity: 1;
+  pointer-events: initial;
+}
+header .main-menu .menu-content .list-container ul li a:hover .span-name {
+  transform: translateX(30px);
+}
+header .main-menu .menu-content .list-container ul li a:hover .span-name::after {
+  width: 100%;
+}
+header .main-menu .menu-content .list-container ul li a .span-icon {
   position: absolute;
-  background-color: red;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9;
+  transition: opacity 0.2s;
+}
+header .main-menu .menu-content .list-container ul li a .span-icon img {
+  width: 26px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(7491%) hue-rotate(312deg) brightness(93%) contrast(97%);
+  transform: rotate(-45deg);
+}
+header .main-menu .menu-content .list-container ul li a .span-name {
+  position: relative;
+  font-size: 1.1rem;
+  z-index: 10;
+  line-height: 30px;
+  transition: transform 0.4s;
+}
+header .main-menu .menu-content .list-container ul li a .span-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #EFE8D4;
+  transition: width 0.4s;
 }
 header .main-menu .menu-content .list-icon-container {
   background-color: #0C0B14;

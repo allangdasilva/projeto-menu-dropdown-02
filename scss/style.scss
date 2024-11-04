@@ -92,11 +92,55 @@ header {
     
                             &:hover {
                                 background-color: $dark-blue-02;
-                            }
-                            span {
-                                position: absolute;
 
-                                background-color: red;
+                                .span-icon {
+                                    opacity: 1;
+                                    pointer-events: initial;
+                                }
+                                .span-name {
+                                    transform: translateX(30px);
+
+                                    &::after {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .span-icon {
+                                position: absolute;
+                                
+                                opacity: 0;
+                                pointer-events: none;
+                                z-index: 9;
+
+                                transition: opacity .2s;
+
+                                img {
+                                    width: 26px;
+                                    filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(7491%) hue-rotate(312deg) brightness(93%) contrast(97%);
+                                    transform: rotate(-45deg);
+                                }
+                            }
+                            .span-name {
+                                position: relative;
+                                font-size: 1.1rem;
+                                z-index: 10;
+
+                                line-height: 30px;
+                                transition: transform .4s;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+
+                                    height: 2px;
+                                    width: 0;
+
+                                    background-color: $navajo-white;
+
+                                    transition: width .4s;
+                                }
                             }
                         }
                     }
