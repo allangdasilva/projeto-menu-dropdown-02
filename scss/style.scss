@@ -80,7 +80,11 @@ header {
                 ul {
                     li {
                         a {
-                            display: block;
+                            position: relative;
+                            
+                            @include flex-center;
+                            justify-content: flex-start;
+
                             padding: 10px 20px;
     
                             color: $navajo-white;
@@ -88,6 +92,11 @@ header {
     
                             &:hover {
                                 background-color: $dark-blue-02;
+                            }
+                            span {
+                                position: absolute;
+
+                                background-color: red;
                             }
                         }
                     }

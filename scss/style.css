@@ -59,13 +59,21 @@ header .main-menu .menu-content {
   transition: transform 0.4s;
 }
 header .main-menu .menu-content .list-container ul li a {
-  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   padding: 10px 20px;
   color: #EFE8D4;
   background-color: #0C0B14;
 }
 header .main-menu .menu-content .list-container ul li a:hover {
   background-color: #110F1B;
+}
+header .main-menu .menu-content .list-container ul li a span {
+  position: absolute;
+  background-color: red;
 }
 header .main-menu .menu-content .list-icon-container {
   background-color: #0C0B14;
