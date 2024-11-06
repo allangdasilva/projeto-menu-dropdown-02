@@ -58,6 +58,9 @@ header .main-menu .menu-content {
   background-color: #0C0B14;
   transition: transform 0.4s;
 }
+header .main-menu .menu-content .list-container ul:has(a:hover) a:not(:hover) {
+  color: #888375;
+}
 header .main-menu .menu-content .list-container ul li a {
   position: relative;
   display: flex;

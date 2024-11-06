@@ -78,6 +78,11 @@ header {
 
             .list-container {
                 ul {
+                    &:has(a:hover) {
+                        a:not(:hover){
+                            color: $navajo-dark;
+                        }
+                    }
                     li {
                         a {
                             position: relative;
@@ -96,6 +101,7 @@ header {
                                 .span-icon {
                                     opacity: 1;
                                     pointer-events: initial;
+                                    
                                 }
                                 .span-name {
                                     transform: translateX(30px);
@@ -105,6 +111,7 @@ header {
                                     }
                                 }
                             }
+                            
                             .span-icon {
                                 position: absolute;
                                 
