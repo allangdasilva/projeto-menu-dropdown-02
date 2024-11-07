@@ -58,8 +58,33 @@ header .main-menu .menu-content {
   background-color: #0C0B14;
   transition: transform 0.4s;
 }
+header .main-menu .menu-content.menu-content-active {
+  transform: translateX(0);
+}
+header .main-menu .menu-content.menu-content-active .list-container li {
+  transform: translateX(0);
+  transition: transform 0.4s ease-out;
+}
+header .main-menu .menu-content.menu-content-active .list-container li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+header .main-menu .menu-content.menu-content-active .list-container li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+header .main-menu .menu-content.menu-content-active .list-container li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+header .main-menu .menu-content.menu-content-active .list-container li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+header .main-menu .menu-content.menu-content-active .list-container li:nth-child(5) {
+  transition-delay: 0.5s;
+}
 header .main-menu .menu-content .list-container ul:has(a:hover) a:not(:hover) {
   color: #888375;
+}
+header .main-menu .menu-content .list-container ul li {
+  transform: translateX(-150px);
 }
 header .main-menu .menu-content .list-container ul li a {
   position: relative;
@@ -70,9 +95,6 @@ header .main-menu .menu-content .list-container ul li a {
   padding: 10px 20px;
   color: #EFE8D4;
   background-color: #0C0B14;
-}
-header .main-menu .menu-content .list-container ul li a:hover {
-  background-color: #110F1B;
 }
 header .main-menu .menu-content .list-container ul li a:hover .span-icon {
   opacity: 1;
@@ -130,7 +152,4 @@ header .main-menu .menu-content .list-icon-container ul li a {
   padding: 20px 10px;
   font-size: 1.2rem;
   color: #EFE8D4;
-}
-header .main-menu .menu-content-active {
-  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
