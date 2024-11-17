@@ -4,17 +4,25 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
+@media screen and (min-width: 950px) {
+  header {
+    background-color: #0C0B14;
+  }
+}
 header .main-menu {
   position: relative;
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 950px) {
   header .main-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
   }
 }
 header .main-menu .logo-icon-container {
@@ -38,7 +46,7 @@ header .main-menu .logo-icon-container .icon-menu {
   width: 25px;
   cursor: pointer;
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 950px) {
   header .main-menu .logo-icon-container .icon-menu {
     display: none;
   }
@@ -71,10 +79,11 @@ header .main-menu .menu-content {
   background-color: #0C0B14;
   transition: transform 0.4s;
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 950px) {
   header .main-menu .menu-content {
     transform: translateX(0);
     flex-direction: row;
+    gap: 40px;
     height: initial;
   }
 }
@@ -100,14 +109,14 @@ header .main-menu .menu-content.menu-content-active .list-container li:nth-child
 header .main-menu .menu-content.menu-content-active .list-container li:nth-child(5) {
   transition-delay: 0.5s;
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 950px) {
   header .main-menu .menu-content .list-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 950px) {
   header .main-menu .menu-content .list-container ul {
     display: flex;
     justify-content: center;
@@ -120,7 +129,7 @@ header .main-menu .menu-content .list-container ul:has(a:hover) a:not(:hover) {
 header .main-menu .menu-content .list-container ul li {
   transform: translateX(-150px);
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 950px) {
   header .main-menu .menu-content .list-container ul li {
     transform: translateX(0);
   }
@@ -134,13 +143,24 @@ header .main-menu .menu-content .list-container ul li a {
   padding: 10px 20px;
   color: #EFE8D4;
   background-color: #0C0B14;
+  transition: color 0.4s;
 }
 header .main-menu .menu-content .list-container ul li a:hover .span-icon {
   opacity: 1;
   pointer-events: initial;
 }
+@media screen and (min-width: 950px) {
+  header .main-menu .menu-content .list-container ul li a:hover .span-icon {
+    margin-right: 0;
+  }
+}
 header .main-menu .menu-content .list-container ul li a:hover .span-name {
   transform: translateX(30px);
+}
+@media screen and (min-width: 950px) {
+  header .main-menu .menu-content .list-container ul li a:hover .span-name {
+    transform: translate(0);
+  }
 }
 header .main-menu .menu-content .list-container ul li a:hover .span-name::after {
   width: 100%;
@@ -151,6 +171,13 @@ header .main-menu .menu-content .list-container ul li a .span-icon {
   pointer-events: none;
   z-index: 9;
   transition: opacity 0.2s;
+}
+@media screen and (min-width: 950px) {
+  header .main-menu .menu-content .list-container ul li a .span-icon {
+    position: initial;
+    margin-right: -30px;
+    transition: margin 0.2s, opacity 0.2s;
+  }
 }
 header .main-menu .menu-content .list-container ul li a .span-icon img {
   width: 26px;
@@ -179,10 +206,15 @@ header .main-menu .menu-content .list-icon-container {
 }
 header .main-menu .menu-content .list-icon-container ul {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-inline: 15px;
+  justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
+  padding-inline: 15px;
+}
+header .main-menu .menu-content .list-icon-container ul:has(li:hover) a:not(:hover) {
+  color: #888375;
 }
 header .main-menu .menu-content .list-icon-container ul li a {
   display: flex;
@@ -191,4 +223,28 @@ header .main-menu .menu-content .list-icon-container ul li a {
   padding: 20px 10px;
   font-size: 1.2rem;
   color: #EFE8D4;
+  transition: color 0.4s;
+}
+header .main-menu .menu-content .list-icon-container ul li a i {
+  position: relative;
+  transition: transform 0.2s;
+}
+header .main-menu .menu-content .list-icon-container ul li a i::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: #EFE8D4;
+  transition: opacity 0.2s;
+}
+header .main-menu .menu-content .list-icon-container ul li a:hover i {
+  transform: translateY(-5px);
+}
+header .main-menu .menu-content .list-icon-container ul li a:hover i::after {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
     align-items: center;
 }
 @mixin desktop {
-    @media screen and (min-width: 820px) {
+    @media screen and (min-width: 950px) {
         @content;
     }
 }
