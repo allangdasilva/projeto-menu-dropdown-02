@@ -56,6 +56,18 @@ header .main-menu .logo-icon-container .icon-menu .menu-hamburger {
   height: 4px;
   width: 25px;
   background-color: #EFE8D4;
+  transition: background-color 0.2s;
+}
+header .main-menu .logo-icon-container .icon-menu .menu-hamburger.menu-hamburger-active {
+  background-color: transparent;
+}
+header .main-menu .logo-icon-container .icon-menu .menu-hamburger.menu-hamburger-active::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+header .main-menu .logo-icon-container .icon-menu .menu-hamburger.menu-hamburger-active::before {
+  transform: rotate(-45deg);
+  top: 0;
 }
 header .main-menu .logo-icon-container .icon-menu .menu-hamburger::after, header .main-menu .logo-icon-container .icon-menu .menu-hamburger::before {
   content: "";
@@ -63,6 +75,7 @@ header .main-menu .logo-icon-container .icon-menu .menu-hamburger::after, header
   height: 4px;
   width: 25px;
   background-color: #EFE8D4;
+  transition: 0.4s;
 }
 header .main-menu .logo-icon-container .icon-menu .menu-hamburger::after {
   top: -8px;

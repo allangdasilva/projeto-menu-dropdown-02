@@ -68,6 +68,21 @@ header {
 
                     background-color: $navajo-white;
 
+                    transition: background-color .2s;
+
+                    &.menu-hamburger-active {
+                        background-color: transparent;
+
+                        &::after {
+                            transform: rotate(45deg);
+                            top: 0;
+                        }
+                        &::before {
+                            transform: rotate(-45deg);
+                            top: 0;
+                        }
+                    }
+                    
                     &::after, &::before {
                         content: '';
                         position: absolute;
@@ -76,6 +91,8 @@ header {
                         width: 25px;
 
                         background-color: $navajo-white;
+
+                        transition: .4s;
                     }
                     &::after {
                         top: -8px;
